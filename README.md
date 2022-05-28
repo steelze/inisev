@@ -32,7 +32,7 @@ Method | Route | Description
 
 ## Setup
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
-  - Import `Inisev.postman_collection.json` in the project directory on postman
+  - Import `Inisev.postman_collection.json` in the project directory to postman
   #### Getting Started
   - git clone https://github.com/steelze/inisev.git
   - Set up the laravel project
