@@ -27,7 +27,7 @@ Create a simple subscription platform(only RESTful APIs with MySQL) in which use
 ## API Endpoints
 Method | Route | Description
 --- | --- | ---
-`POST` | `/api/websites/:id/post` | Add a post for a website
+`POST` | `/api/websites/:id/posts` | Add a post for a website
 `POST` | `/api/websites/:id/subscribe` | Subscribe a user to a website
 
 ## Setup
