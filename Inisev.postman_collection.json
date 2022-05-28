@@ -1,0 +1,105 @@
+{
+	"info": {
+		"_postman_id": "d2574a75-20b5-49f0-a8a0-283b02da7577",
+		"name": "Inisev",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4645093"
+	},
+	"item": [
+		{
+			"name": "Subscribe to website",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Acce",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://inisev.test/api/websites/1/subscribe",
+					"protocol": "http",
+					"host": [
+						"inisev",
+						"test"
+					],
+					"path": [
+						"api",
+						"websites",
+						"1",
+						"subscribe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add post to website",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Acce",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"New Title\",\n    \"description\": \"New Description\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://inisev.test/api/websites/1/posts",
+					"protocol": "http",
+					"host": [
+						"inisev",
+						"test"
+					],
+					"path": [
+						"api",
+						"websites",
+						"1",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"pm.request.headers.add({key:'Accept', value:'application/json' })",
+					"pm.request.headers.add({key:'Content-Type', value:'application/json' })"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
