@@ -43,6 +43,7 @@ These instructions will get you a copy of the project up and running on your loc
   #### Run Migration
     $ php artisan migrate --seed
     $ Serve up application
+- Run the command `php artisan send:mail:subscribers` to send mails to subscribers
  
   
 ## Author
