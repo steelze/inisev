@@ -31,7 +31,9 @@ class SendMultiplePostToSubscriberJob implements ShouldQueue
 
             $posts = DB::select(DB::raw("select posts.* from `posts` left join `post_user` on `post_user`.`post_id` = `posts`.`id` AND `post_user`.`user_id` = ? where `post_user`.`post_id` is null and `website_id` in ($websitesId)"), [$this->user->id]);
 
+            
             if ($posts) {
+                $this->user->posts()->attach(collect($posts)->pluck('id')->toArray());
                 $this->user->notify(new SendMultiplePostsToSubscriberNotification($posts));
             }
         });
